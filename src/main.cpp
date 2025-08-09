@@ -19,7 +19,8 @@ void setup()
         initMQTT();
 
         //Initalize M5Core2
-        setupM5CORE2();
+        //setupM5CORE2();
+        setupDonateScreen();
 
     #elif USE_YOLO_UNO
         //Initialize Accept-Point
@@ -29,6 +30,8 @@ void setup()
         //Initialize websocket
         initWebSocket();
 
+    #elif USEESP32_C3
+        setupESP32C3();
     #endif
 
     //Initialize sensors
@@ -66,10 +69,14 @@ void loop()
     reconnectMQTT();
     
     #ifdef USEM5_CORE2
-        loopM5CORE2();
+        // loopM5CORE2();
+        loopDonateScreen();
+    #endif
+
+    #ifdef USEESP32_C3
+        loopESP32C3();
     #endif
 
     
     //Serial.println(WiFi.getMode());
 }
-

@@ -53,6 +53,12 @@
 #include "../src/m5core2/flobbyBirdM5CORE2.h"
 #include "../src/m5core2/directionM5CORE2.h"
 #include "../src/m5core2/changeColorM5CORE2.h"
+#include "../src/m5core2/donateM5CORE2.h"
+#endif
+
+//ESP32-C3
+#ifdef USEESP32_C3
+#include "../src/ESP32C3/basicESP32C3.h"
 #endif
 
 #endif
